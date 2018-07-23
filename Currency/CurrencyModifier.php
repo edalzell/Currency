@@ -2,6 +2,7 @@
 
 namespace Statamic\Addons\Currency;
 
+use Statamic\API\Config;
 use Statamic\Extend\Modifier;
 
 class CurrencyModifier extends Modifier
@@ -16,7 +17,7 @@ class CurrencyModifier extends Modifier
      */
     public function index($value, $params, $context)
     {
-		setlocale(LC_MONETARY, 'en_US.UTF-8');
-		return money_format('%.2n', $value / 100);
+        setlocale(LC_MONETARY, array_get($params, 0, Config::getFullLocale()));
+        return money_format('%.2n', $value / 100);
     }
 }

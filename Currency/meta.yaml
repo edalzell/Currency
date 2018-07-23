@@ -1,0 +1,7 @@
+name: Currency
+version: "1.0.1"
+description: Formats a number into the proper string based on site locale
+url: https://github.com/edalzell/statamic-currency
+developer: Erin Dalzell
+developer_url: silentzconsulting.com/addons
+commercial: false
